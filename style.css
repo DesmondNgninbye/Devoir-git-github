@@ -1,0 +1,234 @@
+/*crreation d'un formulaire. */
+:root{
+    --pramary-color:#140342;
+    --input-color:#00FF84;
+    --github-color:#24292e;
+    --google-color:#4285F4;
+}
+
+main{
+    display: flex;
+}
+
+*{
+    margin: 0 ;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+section{
+    height:100vh;
+}
+
+P,input,button,a{
+    font-size: 1rem;
+}
+
+button{
+    cursor: pointer;
+}
+
+svg{
+    width: 26 px;
+    height: 26 px;
+
+}
+
+.register-left{
+    width:41.66667%;
+    background-color: var(--pramary-color);
+}
+
+.register-form{
+    width:66.66667%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-form{
+    box-shadow: 0 0 3px rgba(0, 0,0, 0.5);
+    padding: 3.5rem;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.container-form h1{
+    color: var(--pramary-color);
+    font-size: 30px;
+}
+
+.container-form p{
+    margin-top: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.container-form-row{
+    display: flex;
+    gap: 2.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.container-form-input{
+    display: flex;
+    flex-direction: column;
+}
+
+.container-form-input label span{
+    color: red;
+}
+
+.container-form-input input{
+    border-radius: 0.2rem;
+    padding: 1rem;
+    border-width: 0;
+    outline: 1px solid rgb(206, 206, 206);
+}
+
+.container-form-input input:focus{
+    outline: 2px solid var(--input-color)
+}
+
+.container-checkbox{
+    display: flex;
+    gap: 1rem;
+}
+
+.container-checkbox input{
+    width: 1rem;
+    height: 1rem;
+}
+
+.container-checkbox input:focus{
+
+    outline: 2px solid var(--input-color)
+}
+
+.submit-btn{
+    width: 100%;
+    padding: 1rem;
+    margin: 1rem 0;
+    background-color: var(--input-color);
+    border-radius: 0.2rem;
+    border-width: 0;
+outline: 2px solid var(--input-color);
+transition: background-color 200ms;
+
+}
+.submit-btn:hover{
+    background-color: white;
+}
+.or-text{
+    text-align: center;
+}
+.container-button{
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+    width: 100%;
+}
+.container-button button{
+    display: flex;
+    align-items: center;
+    border-radius: 0.2rem;
+    border-width: 0;
+    gap: 1rem;
+    padding: 0.9rem;
+    width: 100%;
+    transition: background-color 200ms;
+}
+.container-button button:first-of-type{
+    outline: 2px solid var(--github-color);
+    background-color: white;
+    color: var(--github-color);
+}
+.container-button button:first-of-type:hover{
+    background-color:var(--github-color) ;
+    color:white;
+}
+.container-button button:last-of-type{
+    outline: 2px solid var(--google-color);
+    background-color: white;
+    color: var(--google-color);
+}
+.container-button button:last-of-type:hover{
+    background-color:var(--google-color) ;
+    color:white;
+}
+.register-left{
+    position: relative;
+}
+.register-left img{
+    border-radius: 100%;
+    position: absolute;
+    top: 20px;
+}
+.img1{
+left: 100px;
+}
+.img2{
+    left: 18px;
+}
+.img3{
+    left: 400px;
+}
+@media screen and (max-width:768px) {
+    main{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .register-left{
+        width: 100%;
+    }
+
+    .register-form{
+        margin-top: 30px;
+    }
+
+    .img1{
+        left: 200px;
+    }
+
+    .img2{
+        left: 200px;
+    }
+
+    .img3{
+        left: 480px;
+    }
+}
+
+@media screen and (max-width:320px){
+    .img1{
+        width: 300px;
+        height: 300px;
+    }
+
+    .register-form{
+        width: 100%;
+        margin-top:100px;
+    }
+
+    .container-form{
+    width: 100%;
+    padding: 15px;
+    }
+
+    .container-form-row,.container-button{
+        flex-direction: column;
+    }
+
+    .container-form-row{
+        margin: 1rem 0;
+        gap: 1rem;
+        
+    }
+
+    .container-form{
+        margin-top: 120px;
+    }
+}
